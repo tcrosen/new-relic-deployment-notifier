@@ -2,12 +2,11 @@
   "name": "new-relic-deploy-notification",
   "version": "1.0.0",
   "description": "Command-line utility for sending deployment notifications to New Relic",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "notify": "index.js"
+    "notify": "cli.js"
   },
   "author": "Terry Rosen",
   "license": "ISC",
