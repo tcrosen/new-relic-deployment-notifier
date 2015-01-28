@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "bin": {
+    "notify": "index.js"
+  },
+  "author": "Terry Rosen",
   "license": "ISC",
   "dependencies": {
     "commander": "^2.6.0",

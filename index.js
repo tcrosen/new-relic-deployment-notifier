@@ -1,6 +1,5 @@
-/**
- * Module dependencies.
- */
+#!/usr/bin/env node
+
 var request = require('request');
 var program = require('commander');
 
