@@ -40,10 +40,6 @@ module.exports = function(params, done) {
       console.log('Response Headers: ', response.headers);
       console.log('Body: ', body);
 
-      if (program.v) {
-        console.log(response);
-      }
-
       done(error, response, body);
     }
   });
