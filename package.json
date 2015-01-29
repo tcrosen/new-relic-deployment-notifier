@@ -10,6 +10,7 @@
   },
   "main": "index.js",
   "author": "Terry Rosen",
+  "repository": "https://github.com/tcrosen/nr-deploy-notifier",
   "license": "ISC",
   "dependencies": {
     "commander": "^2.6.0",
