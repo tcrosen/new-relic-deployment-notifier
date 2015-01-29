@@ -42,7 +42,8 @@ if (!program.apiKey) {
     desc: program.desc || defaults.desc,
     rev: program.rev || defaults.rev,
     changeLog: program.changeLog || defaults.changeLog,
-    user: program.user || defaults.user
+    user: program.user || defaults.user,
+    proxy: program.proxy
   };
 
   notify(params, function(err) {
