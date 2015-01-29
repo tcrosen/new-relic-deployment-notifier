@@ -1,6 +1,6 @@
 {
   "name": "nr-deploy-notifier",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Command-line utility for sending deployment notifications to New Relic",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
