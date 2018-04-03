@@ -16,15 +16,13 @@ module.exports = function(params, done) {
     proxy: params.proxy,
     method: 'POST',
     form: {
-      'deployment[app_name]': params.appName,
-      'deployment[application_id]': params.appId,
       'deployment[description]': params.desc,
       'deployment[revision]': params.rev,
       'deployment[changelog]': params.changeLog,
       'deployment[user]': params.user
     },
     headers: {
-      'content-type': 'application/x-www-form-urlencoded',
+      'content-type': 'application/json',
       'x-api-key': params.apiKey
     }
   };

@@ -4,7 +4,7 @@ var program = require('commander');
 var notify = require('./index');
 
 var defaults = {
-  nrUrl: 'http://rpm.newrelic.com/deployments.xml',
+  nrUrl: 'https://api.newrelic.com/v2/applications/${APP_ID}/deployments.json',
   appId: null,
   apiKey: null,
   proxy: null,
@@ -19,7 +19,6 @@ program
   .version('0.0.1')
   .option('-k, --api-key <value>', 'New Relic API key')
   .option('-i, --app-id [value]', 'New Relic application ID')
-  .option('-n, --app-name [value]', 'New Relic application name')
   .option('-d, --desc [value]', 'Text annotation for the deployment — notes for you')
   .option('-r, --rev [value]', 'The revision number from your source control system')
   .option('-c, --change-log [value]', 'A list of changes for this deployment')
@@ -30,12 +29,12 @@ program
 
 if (!program.apiKey) {
   throw Error('An API key (-k) is required');
-} else if (!program.appId && !program.appName) {
-  throw Error('An app ID (-i) or app name (-n) is required');
+} else if (!program.appId) {
+  throw Error('An app ID (-i) is required');
 } else {
 
   var params = {
-    nrUrl: defaults.nrUrl,
+    nrUrl: defaults.nrUrl.replace('${APP_ID}', program.appId),
     apiKey: program.apiKey,
     appId: program.appId || defaults.appId,
     appName: program.appName || defaults.appName,
